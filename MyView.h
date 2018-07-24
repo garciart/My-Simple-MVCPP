@@ -23,20 +23,24 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   MyView.h
  * Author: Rob Garcia at rgarcia@rgprogramming.com
  *
- * Created on July 2, 2018, 2:37 PM
+ * Created on July 2, 2018, 6:00 PM
  */
 
-#include <cstdlib>
-#include "MyController.h"
+#ifndef MYVIEW_H
+#define MYVIEW_H
 
-/*
- * 
- */
-int main(int argc, char** argv) {
-    // Instantiate controller
-    MyController m;
-    return EXIT_SUCCESS;
-}
+#include <iostream>
+
+class MyView {
+public:
+    MyView();
+    std::string whoAreYou();
+    void salutation(std::string newName);
+private:
+
+};
+
+#endif /* MYVIEW_H */

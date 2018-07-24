@@ -23,20 +23,26 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   MyModel.h
  * Author: Rob Garcia at rgarcia@rgprogramming.com
  *
- * Created on July 2, 2018, 2:37 PM
+ * Created on July 2, 2018, 5:58 PM
  */
 
-#include <cstdlib>
-#include "MyController.h"
+#ifndef MYMODEL_H
+#define MYMODEL_H
 
-/*
- * 
- */
-int main(int argc, char** argv) {
-    // Instantiate controller
-    MyController m;
-    return EXIT_SUCCESS;
-}
+#include <iostream>
+
+class MyModel {
+public:
+    MyModel();
+    std::string getName();
+    void setName(std::string n);
+    std::string newName(std::string oldName);
+private:
+    std::string name;
+};
+
+#endif /* MYMODEL_H */
+

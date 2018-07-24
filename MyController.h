@@ -23,20 +23,23 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   MyController.h
  * Author: Rob Garcia at rgarcia@rgprogramming.com
  *
- * Created on July 2, 2018, 2:37 PM
+ * Created on July 2, 2018, 3:38 PM
  */
 
-#include <cstdlib>
-#include "MyController.h"
+#ifndef MYCONTROLLER_H
+#define MYCONTROLLER_H
 
-/*
- * 
- */
-int main(int argc, char** argv) {
-    // Instantiate controller
-    MyController m;
-    return EXIT_SUCCESS;
-}
+#include <iostream>
+
+class MyController {
+public:
+    MyController();
+private:
+    std::string userName;
+};
+
+#endif /* MYCONTROLLER_H */
+

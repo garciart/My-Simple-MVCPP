@@ -23,20 +23,34 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   MyView.cpp
  * Author: Rob Garcia at rgarcia@rgprogramming.com
- *
- * Created on July 2, 2018, 2:37 PM
- */
-
-#include <cstdlib>
-#include "MyController.h"
-
-/*
  * 
+ * Created on July 2, 2018, 6:00 PM
  */
-int main(int argc, char** argv) {
-    // Instantiate controller
-    MyController m;
-    return EXIT_SUCCESS;
+
+#include "MyView.h"
+
+MyView::MyView() {
+    
+}
+
+/**
+ * Asks for the user's name.
+ * @return The user's name.
+*/
+std::string MyView::whoAreYou() {
+    std::string yourName;
+    std::cout << "Hello, World!" << std::endl;
+    std::cout << "What is your name: ";
+    std::getline(std::cin, yourName);
+    return yourName;
+}
+
+/**
+ * Displays the modified user's name.
+ * @param newName The modified user's name.
+*/
+void MyView::salutation(std::string newName) {
+    std::cout << "Your new name is " << newName << std::endl;
 }

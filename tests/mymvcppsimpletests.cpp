@@ -23,20 +23,39 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   mymvcppsimpletests.cpp
  * Author: Rob Garcia at rgarcia@rgprogramming.com
  *
- * Created on July 2, 2018, 2:37 PM
+ * Created on July 24, 2018, 5:40 PM
  */
 
-#include <cstdlib>
-#include "MyController.h"
+#include <stdlib.h>
+#include <iostream>
+#include "MyModel.h"
 
 /*
- * 
+ * Simple C++ Test Suite
  */
-int main(int argc, char** argv) {
-    // Instantiate controller
-    MyController m;
-    return EXIT_SUCCESS;
+
+void testNewName() {
+    std::string oldName = "Richie";
+    MyModel myModel;
+    std::string result = myModel.newName(oldName);
+    if (!(result.substr(result.length() - 10, 10) == "the Great!") /*check result*/) {
+        std::cout << "%TEST_FAILED% time=0 testname=testNewName (mymvcppsimpletests) message=error message sample" << std::endl;
+    }
 }
+
+int main(int argc, char** argv) {
+    std::cout << "%SUITE_STARTING% mymvcppsimpletests" << std::endl;
+    std::cout << "%SUITE_STARTED%" << std::endl;
+
+    std::cout << "%TEST_STARTED% testNewName (mymvcppsimpletests)" << std::endl;
+    testNewName();
+    std::cout << "%TEST_FINISHED% time=0 testNewName (mymvcppsimpletests)" << std::endl;
+
+    std::cout << "%SUITE_FINISHED% time=0" << std::endl;
+
+    return (EXIT_SUCCESS);
+}
+

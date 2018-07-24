@@ -23,20 +23,25 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   MyController.cpp
  * Author: Rob Garcia at rgarcia@rgprogramming.com
- *
- * Created on July 2, 2018, 2:37 PM
- */
-
-#include <cstdlib>
-#include "MyController.h"
-
-/*
  * 
+ * Created on July 2, 2018, 3:38 PM
  */
-int main(int argc, char** argv) {
-    // Instantiate controller
-    MyController m;
-    return EXIT_SUCCESS;
+
+#include "MyController.h"
+#include "MyModel.h"
+#include "MyView.h"
+
+MyController::MyController() {
+    // Instantiate classes
+    MyView v;
+    MyModel m;
+    // Get data from view
+    userName = v.whoAreYou();
+    // Send data to model and get manipulated data
+    m.setName(userName);
+    userName = m.newName(m.getName());
+    // Send manipulated data to view
+    v.salutation(userName);
 }

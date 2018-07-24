@@ -4,4 +4,17 @@
         <activeConfTypeElem>1</activeConfTypeElem>
         <activeConfIndexElem>0</activeConfIndexElem>
     </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/garci/Documents/NetBeansProjects/MySimpleMVCPP/MyModel.cpp</file>
+            <file>file:/C:/Users/garci/Documents/NetBeansProjects/MySimpleMVCPP/MyController.cpp</file>
+            <file>file:/C:/Users/garci/Documents/NetBeansProjects/MySimpleMVCPP/MyModel.h</file>
+            <file>file:/C:/Users/garci/Documents/NetBeansProjects/MySimpleMVCPP/tests/mymvcppsimpletests.cpp</file>
+            <file>file:/C:/Users/garci/Documents/NetBeansProjects/MySimpleMVCPP/MyView.cpp</file>
+            <file>file:/C:/Users/garci/Documents/NetBeansProjects/MySimpleMVCPP/MyController.h</file>
+            <file>file:/C:/Users/garci/Documents/NetBeansProjects/MySimpleMVCPP/MyView.h</file>
+            <file>file:/C:/Users/garci/Documents/NetBeansProjects/MySimpleMVCPP/main.cpp</file>
+        </group>
+    </open-files>
 </project-private>

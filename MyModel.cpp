@@ -23,20 +23,38 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   MyModel.cpp
  * Author: Rob Garcia at rgarcia@rgprogramming.com
- *
- * Created on July 2, 2018, 2:37 PM
- */
-
-#include <cstdlib>
-#include "MyController.h"
-
-/*
  * 
+ * Created on July 2, 2018, 5:58 PM
  */
-int main(int argc, char** argv) {
-    // Instantiate controller
-    MyController m;
-    return EXIT_SUCCESS;
+
+#include "MyModel.h"
+
+MyModel::MyModel() {
+    
+}
+
+/// Name getter
+std::string MyModel::getName() {
+    return name;
+}
+
+/// Name setter
+void MyModel::setName(std::string n) {
+    name = n;
+}
+
+/**
+ * Adds an epithet to the user's name.
+ * @param The user's name
+ * @return The modified user's name.
+*/
+std::string MyModel::newName(std::string userName) {
+    if(userName.length() <= 6) {
+        return (userName + " the Great!");
+    }
+    else {
+        return (userName + " the Magnificent!");
+    }
 }
